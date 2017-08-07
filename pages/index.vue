@@ -7,6 +7,7 @@
       <v-card>
         <v-card-text>
           <p>Welcome to the Webpack SSR template.</p>
+          {{ stats }}
           <p>Vuetify is a progressive Material Design component framework for Vue.js. It was designed to empower developers to create amazing applications. For more information on Vuetify, check out the <a href="https://vuetifyjs.com" target="_blank">documentation</a>. If you have questions, please join the official <a href="https://gitter.im/vuetifyjs/Lobby" target="_blank" title="chat">gitter</a>. Find a bug? Report it on the github <a href="https://github.com/vuetifyjs/vuetify/issues" target="_blank" title="contribute">issue board</a>.</p>
           <p>Thank you for developing with Vuetify and I look forward to bringing more exciting features in the future.</p>
           <div class="text-xs-right">
@@ -46,3 +47,16 @@
     </v-flex>
   </v-layout>
 </template>
+
+<script>
+import axios from 'axios'
+
+export default {
+  asyncData (conext) {
+    return axios.get('https://owapi.net/api/v3/u/Nioto-2215/blob')
+      .then((res) => {
+        return { stats: res.data.eu.heroes.stats.competitive.zenyatta.general_stats.time_spent_on_fire_avg_per_10_min }
+      })
+  }
+}
+</script>
