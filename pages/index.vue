@@ -15,7 +15,7 @@
           </div>
         </v-card-text>
         <v-card-actions>
-          <v-btn primary flat router nuxt to="/inspire">Continue</v-btn>
+          <v-btn primary flat nuxt>Continue</v-btn>
         </v-card-actions>
       </v-card>
             <v-card>
@@ -28,7 +28,7 @@
           </div>
         </v-card-text>
         <v-card-actions>
-          <v-btn primary flat router nuxt to="/inspire">Continue</v-btn>
+          <v-btn primary flat nuxt>Continue</v-btn>
         </v-card-actions>
       </v-card>
             <v-card>
@@ -41,7 +41,7 @@
           </div>
         </v-card-text>
         <v-card-actions>
-          <v-btn primary flat router nuxt to="/inspire">Continue</v-btn>
+          <v-btn primary flat nuxt>Continue</v-btn>
         </v-card-actions>
       </v-card>
     </v-flex>
@@ -49,14 +49,6 @@
 </template>
 
 <script>
-import axios from 'axios'
-
 export default {
-  asyncData (conext) {
-    return axios.get('https://owapi.net/api/v3/u/Nioto-2215/blob')
-      .then((res) => {
-        return { stats: res.data.eu.heroes.stats.competitive.zenyatta.general_stats.time_spent_on_fire_avg_per_10_min }
-      })
-  }
 }
 </script>
