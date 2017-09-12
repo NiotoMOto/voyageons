@@ -61,7 +61,7 @@
         fixed: false,
         items: [
           { icon: 'apps', title: 'Welcome', to: '/' },
-          { icon: 'bubble_chart', title: 'Inspire', to: '/inspire' }
+          { icon: 'build', title: 'backoffice', to: '/backoffice' }
         ],
         miniVariant: true,
         right: true,
