@@ -2,47 +2,13 @@
   <v-layout column justify-center align-center>
     <v-flex xs12 sm8 md6>
       <div class="text-xs-center">
-        <img src="/v.png" alt="Vuetify.js" class="mb-5" />
+        <img height="70px" src="/guillemot.png" class="mb-5" alt="guillemoto.io" title="Guillemoto.io" />
       </div>
       <v-card>
         <v-card-text>
-          <p>Welcome to the Webpack SSR template.</p>
-          {{ stats }}
-          <p>Vuetify is a progressive Material Design component framework for Vue.js. It was designed to empower developers to create amazing applications. For more information on Vuetify, check out the <a href="https://vuetifyjs.com" target="_blank">documentation</a>. If you have questions, please join the official <a href="https://gitter.im/vuetifyjs/Lobby" target="_blank" title="chat">gitter</a>. Find a bug? Report it on the github <a href="https://github.com/vuetifyjs/vuetify/issues" target="_blank" title="contribute">issue board</a>.</p>
-          <p>Thank you for developing with Vuetify and I look forward to bringing more exciting features in the future.</p>
-          <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
-          </div>
+       Bienvenu sur ma modeste plateforme me permettant de garder une trace de mes "voyages".
+       Vous trouverez ici les photos et les explications de ses dernières.
         </v-card-text>
-        <v-card-actions>
-          <v-btn primary flat nuxt>Continue</v-btn>
-        </v-card-actions>
-      </v-card>
-            <v-card>
-        <v-card-text>
-          <p>Welcome to the Webpack SSR template.</p>
-          <p>Vuetify is a progressive Material Design component framework for Vue.js. It was designed to empower developers to create amazing applications. For more information on Vuetify, check out the <a href="https://vuetifyjs.com" target="_blank">documentation</a>. If you have questions, please join the official <a href="https://gitter.im/vuetifyjs/Lobby" target="_blank" title="chat">gitter</a>. Find a bug? Report it on the github <a href="https://github.com/vuetifyjs/vuetify/issues" target="_blank" title="contribute">issue board</a>.</p>
-          <p>Thank you for developing with Vuetify and I look forward to bringing more exciting features in the future.</p>
-          <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
-          </div>
-        </v-card-text>
-        <v-card-actions>
-          <v-btn primary flat nuxt>Continue</v-btn>
-        </v-card-actions>
-      </v-card>
-            <v-card>
-        <v-card-text>
-          <p>Welcome to the Webpack SSR template.</p>
-          <p>Vuetify is a progressive Material Design component framework for Vue.js. It was designed to empower developers to create amazing applications. For more information on Vuetify, check out the <a href="https://vuetifyjs.com" target="_blank">documentation</a>. If you have questions, please join the official <a href="https://gitter.im/vuetifyjs/Lobby" target="_blank" title="chat">gitter</a>. Find a bug? Report it on the github <a href="https://github.com/vuetifyjs/vuetify/issues" target="_blank" title="contribute">issue board</a>.</p>
-          <p>Thank you for developing with Vuetify and I look forward to bringing more exciting features in the future.</p>
-          <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
-          </div>
-        </v-card-text>
-        <v-card-actions>
-          <v-btn primary flat nuxt>Continue</v-btn>
-        </v-card-actions>
       </v-card>
     </v-flex>
   </v-layout>
