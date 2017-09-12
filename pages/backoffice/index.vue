@@ -1,4 +1,5 @@
 <template>
+ <v-container fluid>
   <v-layout column justify-center align-center>
     <v-dialog v-model="createVoyageDialog" lazy>
       <v-btn primary dark slot="activator">Créer nouveau voyage</v-btn>
@@ -17,15 +18,23 @@
             required
             multi-line>
           </v-text-field>
-           <v-select
-              v-bind:items="countries"
-              v-model="voyage.country"
-              item-text="name"
-              item-value="alpha-2"
-              label="Pays"
-              autocomplete
-            >
-          </v-select>
+          <v-select
+            v-bind:items="countries"
+            v-model="voyage.country"
+            item-text="name"
+            item-value="alpha-2"
+            label="Pays"
+            autocomplete>
+          </v-select> 
+          <v-checkbox
+            label="Publish"
+            v-model="voyage.published">
+          </v-checkbox>
+          <v-checkbox
+            label="Active"
+            v-model="voyage.active">
+          </v-checkbox>
+
         </v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
@@ -34,8 +43,11 @@
         </v-card-actions>
       </v-card>
     </v-dialog>
-    <voyage-list :items="items" />
+    <v-flex xs12>
+      <voyage-list :items="items" />
+    </v-flex>
   </v-layout>
+ </v-container>
 </template>
 
 <script>
@@ -48,7 +60,9 @@ export default {
     createVoyageDialog: false,
     voyage: {
       name: '',
-      country: ''
+      country: '',
+      published: false,
+      active: false
     },
     items: [],
     countries: countries
@@ -64,6 +78,7 @@ export default {
         axios.get('http://localhost:4012/api/v1/voyage').then(response => {
           this.items = response.data
           this.createVoyageDialog = false
+          this.voyage = {}
         })
       })
     }
